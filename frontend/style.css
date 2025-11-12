@@ -1,0 +1,142 @@
+/* === Estilo do Verificador de Pré-requisitos === */
+
+:root {
+  --bg: #f9fafb;
+  --primary: #2563eb;
+  --primary-hover: #1e40af;
+  --success-bg: #e6f7ed;
+  --success-border: #b6e3c1;
+  --warn-bg: #fff8e1;
+  --warn-border: #ffecb5;
+  --error-bg: #fde2e2;
+  --error-border: #f5c2c7;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 480px;
+  width: 100%;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--primary);
+}
+
+.muted {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+button {
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+#resultado {
+  margin-top: 1.5rem;
+}
+
+.ok, .warn, .err {
+  border-radius: var(--radius);
+  padding: 1rem;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+.ok {
+  background: var(--success-bg);
+  border: 1px solid var(--success-border);
+  color: #0f5132;
+}
+
+.warn {
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-border);
+  color: #7a5200;
+}
+
+.err {
+  background: var(--error-bg);
+  border: 1px solid var(--error-border);
+  color: #842029;
+}
+
+em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--primary-hover);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

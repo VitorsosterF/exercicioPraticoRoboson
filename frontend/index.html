@@ -1,0 +1,38 @@
+<!-- frontend/index.html -->
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Verificador de Pré-requisitos</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 2rem; }
+    .card { max-width: 640px; border: 1px solid #ddd; border-radius: 12px; padding: 16px; }
+    label { display:block; margin-top:12px; font-weight:600; }
+    input, textarea { width:100%; padding:10px; border:1px solid #ccc; border-radius:8px; }
+    button { margin-top:16px; padding:10px 16px; border:0; border-radius:10px; cursor:pointer; }
+    .ok { background:#e7f8f0; border:1px solid #bdebd9; color:#0f5132; padding:12px; border-radius:8px; }
+    .warn { background:#fff3cd; border:1px solid #ffecb5; color:#664d03; padding:12px; border-radius:8px; }
+    .err { background:#fde2e2; border:1px solid #f5c2c7; color:#842029; padding:12px; border-radius:8px; }
+    .muted { color:#666; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Verificador de Pré-requisitos</h1>
+    <p class="muted">Digite as disciplinas já concluídas (separadas por vírgula) e a disciplina que deseja cursar.</p>
+
+    <label for="concluidas">Concluídas</label>
+    <textarea id="concluidas" rows="3" placeholder="Ex.: bd1, calc1, alg1"></textarea>
+
+    <label for="curso">Quero cursar</label>
+    <input id="curso" type="text" placeholder="Ex.: bd2" />
+
+    <button id="btn">Verificar</button>
+
+    <div id="resultado" style="margin-top:16px;"></div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
